@@ -55,11 +55,11 @@ def runS3Build(String projectname) {
 pipeline {
     agent any
     parameters {
-        string(name: 'BEHAVE_PROJECTNAME', defaultValue: '%BehaveScanningProjectName', description: 'CodeBuild project name')
-        string(name: 'BEHAVE_IMAGE_BUILD_PROJECTNAME', defaultValue: '%BehaveImageBuildProjectName', description: 'CodeBuild project name')
-        string(name: 'WEBGOAT_PROJECTNAME', defaultValue: '%WebGoatBuildProjectName', description: 'CodeBuild project name')
-        string(name: 'JOERN_PROJECTNAME', defaultValue: '%JoernScanProjectName', description: 'CodeBuild project name')
-        string(name: 'ARTIFACT_S3', defaultValue: '%S3ArtifactName', description: 'CodeBuild artifact bucket')
+        string(name: 'BEHAVE_PROJECTNAME', defaultValue: 'BehaveScanningA47DC743-6hcI444HtZqC', description: 'CodeBuild project name')
+        string(name: 'BEHAVE_IMAGE_BUILD_PROJECTNAME', defaultValue: 'BehaveImageBuild589EE72D-uC5ziZetGucK', description: 'CodeBuild project name')
+        string(name: 'WEBGOAT_PROJECTNAME', defaultValue: 'BuildImage74257FD8-aEK5eYCvzgJ0', description: 'CodeBuild project name')
+        string(name: 'JOERN_PROJECTNAME', defaultValue: 'JoernScan2FFB8D2D-9S0cZbieJKE3', description: 'CodeBuild project name')
+        string(name: 'ARTIFACT_S3', defaultValue: 'codebuildstack-jenkinsbuildartifactsf33606a2-ganjumvrxqmr', description: 'CodeBuild artifact bucket')
         choice(name: 'AWS_REGION', choices: ['ap-southeast-1'], description: 'AWS region')
     }
     environment {
