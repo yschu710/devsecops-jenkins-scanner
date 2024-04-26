@@ -76,7 +76,7 @@ Before starting the installation, ensure that the following prerequisites are me
 - An AWS account with CLI access (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`)
 - A Linux-based platform (Recommended: [AWS Cloud9](https://aws.amazon.com/pm/cloud9/))
 - Docker installed
-- Fork the https://github.com/yiuc/devsecops-jenkins-scanner [repository](https://github.com/yiuc/devsecops-jenkins-scanner) under your GitHub account, as you will need to make changes to the repository. Shortenurl - https://bit.ly/apr26
+- Fork the https://github.com/yschu710/devsecops-jenkins-scanner [repository](https://github.com/yschu710/devsecops-jenkins-scanner) under your GitHub account, as you will need to make changes to the repository. Shortenurl - https://bit.ly/apr26
 
 # 5. Provision AWS resources
 
@@ -107,7 +107,7 @@ Follow the steps below to install and configure the DevSecOps Jenkins scanner.
 
 2. Fork the GitHub repository, generate an SSH access key (`ssh-keygen -t rsa`), and add your SSH public key to the repository's "Deploy Keys" section to grant access rights.
 3. Download the source code from your forked repository: `git clone git@github.com:$YOURID/devsecops-jenkins-scanner` and `cd devsecops-jenkins-scanner`
-4. Modify the repository name: `find . -type f -exec sed -i "s/yiuc/$YOURID/g" {} +`
+4. Modify the repository name: `find . -type f -exec sed -i "s/yschu710/$YOURID/g" {} +`
 5. `git add . && git commit -m "update" -m "change the repo name" && git push`
 <!-- 5. Create a private ECR repository for the "jenkins-master" image:
 
@@ -328,7 +328,7 @@ This code sets up a CodeBuild project named BehaveImageBuild that builds a Docke
                 "codebuild_behave_image_build_buildspec.yaml"
             ),
             source=codebuild.Source.git_hub(
-                owner="yiuc", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
+                owner="yschu710", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
             ),
             environment=codebuild.BuildEnvironment(
                 build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_5,

@@ -4,7 +4,7 @@ pipelineJob('Gauntlt test webgoat') {
             scm {
                 git {
                     remote {
-                        url 'https://github.com/yiuc/devsecops-jenkins-scanner.git'
+                        url 'https://github.com/yschu710/devsecops-jenkins-scanner.git'
                     }
                     branch 'main'
                     scriptPath('jenkins-master-image/Jenkinsfile/gauntlt-webgoat')
@@ -19,7 +19,7 @@ pipelineJob('AWS CodeBuild webgoat') {
             scm {
                 git {
                     remote {
-                        url 'https://github.com/yiuc/devsecops-jenkins-scanner.git'
+                        url 'https://github.com/yschu710/devsecops-jenkins-scanner.git'
                     }
                     branch 'main'
                     scriptPath('jenkins-master-image/Jenkinsfile/build-webgoat')

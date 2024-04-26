@@ -118,7 +118,7 @@ class CodeBuildStack(Stack):
                 "codebuild_stack/codebuild_behave_image_build_buildspec.yaml"
             ),
             source=codebuild.Source.git_hub(
-                owner="yiuc", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
+                owner="yschu710", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
             ),
             environment=codebuild.BuildEnvironment(
                 build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_5,
@@ -138,7 +138,7 @@ class CodeBuildStack(Stack):
 
         secondary_sources = [
             codebuild.Source.git_hub(
-                owner="yiuc", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref, identifier="secondary_source_1"
+                owner="yschu710", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref, identifier="secondary_source_1"
             ),
         ]
         # code build project for execute codebuild_behave_image_build_buildspec.yaml
@@ -211,7 +211,7 @@ class CodeBuildStack(Stack):
                 "codebuild_stack/codebuild_behave_scanning_buildspec.yaml"
             ),
             source=codebuild.Source.git_hub(
-                owner="yiuc", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
+                owner="yschu710", repo="devsecops-jenkins-scanner", branch_or_ref=branch_or_ref
             ),
             environment=codebuild.BuildEnvironment(
                 build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_5,
@@ -240,7 +240,7 @@ class CodeBuildStack(Stack):
                 "codebuild_stack/codebuild_gauntlt_buildspec.yaml"
             ),
             source=codebuild.Source.git_hub(
-                owner="yiuc", repo="devsecops-jenkins-scanner"
+                owner="yschu710", repo="devsecops-jenkins-scanner"
             ),
             environment=codebuild.BuildEnvironment(
                 build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_5,
